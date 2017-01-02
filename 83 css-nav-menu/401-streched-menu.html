@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>伸缩菜单</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+    
+    ul {
+        list-style: none;
+        height: 50px;
+        border-bottom: 5px solid #f60;
+        padding-left: 30px;
+    }
+
+    a {
+        float: left;
+        margin-top: 20px;
+        text-decoration: none;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        width: 120px;
+        background-color: #ccc;
+        margin-bottom: 1px;
+        text-align: center;       
+        border-radius: 15px 15px 0 0;
+    }
+    
+    a {transition:width 0.5s ease;} 
+    a:hover, .on {      
+        background-color: #f60;
+        color: #fff;
+        /* height: 40px;
+           margin-top: 10px;
+           line-height: 40px; 
+         */
+         width: 160px;  
+    }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#" class="on">首　　页</a></li>
+        <li><a href="#">新闻快讯</a></li>
+        <li><a href="#">产品展示</a></li>
+        <li><a href="#">售后服务</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+</body>
+
+</html>

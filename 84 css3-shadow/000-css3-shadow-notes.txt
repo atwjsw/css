@@ -1,0 +1,33 @@
+http://www.imooc.com/learn/240
+CSS3实现“图片阴影”效果
+
+简介：利用多投影（倾斜投影与主体投影）重叠的原理，实现曲线阴影与翘边阴影的效果，从而讲解CSS3新增的 box-shadow 属性、transform 属性与 content 内容生成技术。
+
+#曲线阴影和翘边阴影
+- 实现原理是多个投影的重叠
+- 曲线阴影：1）生成图形+阴影，2）叠加半圆图形+阴影
+- box-shadow: h-shadow v-shadow blur spread color inset
+- box-shadow: 可以添加1个或多个阴影
+h-shadow(必需) ：水平阴影的位置。允许负值（出现在左边）
+v-shadow必需) ：垂直阴影的位置。允许负值 （出现在右边）
+blur（可选）： 模糊距离。（越大阴影扩散的范围越大，越模糊）
+spread（可选）：阴影的尺寸。 （一般不设）
+color（可选）： 阴影的颜色。 (一般用rgba(), 可以同时设透明度)
+inset（可选）：外部阴影（outset）改为内部阴影。阴影在内侧
+
+浏览器兼容：
+IE9+、firefox 4, Chrome, Opera、Safari5.1.1支持
+
+#after与:before
+-after选择器：在被选元素的内容(盒子里面）后面插入内容
+-before选择器：在被选元素的内容(盒子里面）前面插入内容
+- 说明：需使用content属性来指定要插入的内容
+- 浏览器兼容：IE8及更早版本中使用：after，陛下声明<!DOCTYPE>
+
+#transform
+- 对元素应用2D或3D转换
+- transform: none|transform-functions
+- 参数：
+skew(x-angle,y-angle) 定义沿X和Y轴的2D倾斜转换
+skewX(angle)定义沿着X轴的2D倾斜转换。
+skewY(angle)定义沿着Y轴的2D倾斜转换。

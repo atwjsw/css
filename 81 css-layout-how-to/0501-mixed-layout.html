@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>单列布局</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .top {
+        height: 100px;
+        background-color: blue;
+    }
+
+    .head {
+        height: 100px;
+        width: 800px;
+        margin: 0 auto;
+        background-color: #f90;
+    }
+    
+    .main {
+        width: 800px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    
+    .left {
+        width: 200px;
+        height: 400px;
+        float: left;
+        background-color: #eee;
+    }
+    
+    .right {
+        width: 600px;
+        height: 400px;
+        float: left;
+        background-color: #ddd;
+    }
+
+    .sub_l {
+        width: 400px; height: 400px; float: left; background-color: #ccc;
+    }
+
+    .sub_r {
+        width: 200px; height: 400px; float: left; background-color: #ddd;
+    }
+    
+    .foot {
+        width: 800px;
+        height: 100px;
+        margin: 0 auto;
+        background-color: #900;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="head"></div>
+    </div>
+    <div class="main">
+        <div class="left"></div>
+        <div class="right">
+            <div class="sub_l"></div>
+            <div class="sub_r"></div>
+        </div>
+    </div>
+    <div class="foot"></div>
+</body>
+
+</html>

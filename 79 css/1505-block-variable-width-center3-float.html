@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+#box1{
+	background-color: pink;
+	float: left;
+	position:relative;
+	left:50%;
+}
+#box2{
+	background-color: green;
+	position:relative;
+	left:-50%;
+}
+</style>
+
+<body>
+	<div id="box1">
+		<div id="box2">aaaaaaaaaaaaaaaaaa</div>
+	</div>	
+</body>
+</html>
+
+
+
+<!-- - 方法三：通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left: -50% 来实现水平居中。
+
+我们可以这样理解：假想ul层的父层（即下面例子中的div层）中间有条平分线将ul层的父层（div层）平均分为两份，ul层的css代码是将ul层的最左端与ul层的父层（div层）的平分线对齐；而li层的css代码则是将li层的平分线与ul层的最左端（也是div层的平分线）对齐，从而实现li层的居中。 -->

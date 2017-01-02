@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>信息卡片效果</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    body {
+        font-family: "microsoft yahei";
+        font-size: 14px;
+    }
+    
+    #box {
+        width: 550px;
+        border: 1px solid #aaa;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .top {
+        height: 40px;
+    }
+    
+    .top .list:hover {
+        background: url(images/btns.jpg) -20px 0 no-repeat #fff;
+    }
+    
+    .top a {
+        height: 16px;
+        width: 16px;
+        display: block;
+        /*border: 1px solid red;*/
+        float: right;
+        margin: 5px;
+        /*background: url(images/btns.jpg) -38px -32px no-repeat;*/
+    }
+    
+    .top .card:hover {
+        background: url(images/btns.jpg) -20px -33px no-repeat;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    #box ul li {
+        /*height: 236px;*/
+        width: 164px;
+        border: 1px solid #aaa;
+        float: left;
+        margin: 5px;
+    }
+    
+    .item .large {
+        height: 164px;
+        width: 164px;
+    }
+    
+    .item p a,
+    .item p span {
+        display: block;
+        line-height: 23px;
+        padding-left: 10px;
+    }
+    /* .item p a,
+    .item p span {
+        line-height: 20px;
+    }*/
+    
+    .item .bottom {
+        background: #eee;
+        /*padding-left: 10px;*/
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+    .list-off {
+        background: #fff url(http://img.mukewang.com/53ab7e86000153cc00710057.jpg) no-repeat -38px 0px;
+    }
+    
+    .card-on {
+        background: #fff url(http://img.mukewang.com/53ab7e86000153cc00710057.jpg) no-repeat -21px -34px;
+    }
+    
+    .list-on {
+        background: #fff url(http://img.mukewang.com/53ab7e86000153cc00710057.jpg) no-repeat -21px 0px;
+    }
+    
+    .card-off {
+        background: #fff url(http://img.mukewang.com/53ab7e86000153cc00710057.jpg) no-repeat -38px -32px;
+    }
+    /*  .item .small {
+       height: 50px;
+       width: 50px;
+       display: block;
+       float: left;
+       margin: 5px;
+   } */
+    
+    .item .small {
+        height: 50px;
+        width: 50px;
+        display: block;
+        float: left;
+        margin: 5px;
+    }
+    </style>
+
+</head>
+
+<body>
+    <div id="box">
+        <div class="top">
+            <a id="btn-list" class="list-off" href="#" title="列表模式"></a>
+            <a id="btn-card" class="card-on" href="#" title="卡片模式"></a>
+        </div>
+        <ul>
+            <li class="item">
+                <a href="#" class="large" >
+                    <img src="images/big.jpg" />
+                </a>
+                <p>
+                    <a href="#">向阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <p class="bottom">未分组的好友</p>
+            </li>
+            <li class="item">
+                <a href="#" class="large" >
+                    <img src="images/big.jpg" />
+                </a>
+                <p>
+                    <a href="#">向阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <p class="bottom">未分组的好友</p>
+            </li>
+            <li class="item">
+                <a href="#" class="large" >
+                    <img src="images/big.jpg" />
+                </a>
+                <p>
+                    <a href="#">向阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <p class="bottom">未分组的好友</p>
+            </li>
+            <li class="item">
+                <a href="#" class="large" >
+                    <img src="images/big.jpg" />
+                </a>
+                <p>
+                    <a href="#">向阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <p class="bottom">未分组的好友</p>
+            </li>
+            <li class="item">
+                <a href="#" class="large" >
+                    <img src="images/big.jpg" />
+                </a>
+                <p>
+                    <a href="#">向阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <p class="bottom">未分组的好友</p>
+            </li>
+            <li class="item">
+                <a href="#" class="large" >
+                    <img src="images/big.jpg" />
+                </a>
+                <p>
+                    <a href="#">向阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <p class="bottom">未分组的好友</p>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    window.onload = function() {
+        var btnList = document.getElementById('btn-list');
+        var btnCard = document.getElementById('btn-card');
+
+        btnList.onclick = function() {
+            btnList.className = "list-on";
+            btnCard.className = "card-off";
+            var largeImgs = document.getElementsByTagName('img');
+            console.log(largeImgs.length);
+            for (var i = 0; i < largeImgs.length; i++) {
+                largeImgs[i].parentNode.className = "large small";
+                largeImgs[i].src="./images/small.jpg";
+            }
+        };
+
+        btnCard.onclick = function() {
+            btnList.className = "list-off";
+            btnCard.className = "card-on";
+            var smallImgs = document.getElementsByTagName('img');
+            console.log("small " + smallImgs.length);
+            for (var i = 0; i < smallImgs.length; i++) {
+               
+                 smallImgs[i].parentNode.className = "large";
+                 smallImgs[i].src="./images/big.jpg";
+            }
+
+        };
+    };
+    </script>
+</body>
+
+</html>
